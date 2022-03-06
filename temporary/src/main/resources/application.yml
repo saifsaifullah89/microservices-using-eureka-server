@@ -1,0 +1,23 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: temporary
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/temporary
+    username: postgres
+    password: 4321
+    driverClassName: org.postgresql.Driver
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
